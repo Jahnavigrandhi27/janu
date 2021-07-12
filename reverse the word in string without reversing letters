@@ -1,0 +1,31 @@
+import java.util.*;
+import java.io.*;
+class Main
+    {
+        public static void main(String args[])
+        {
+            String n,c;
+            Scanner sc=new Scanner(System.in);
+            System.out.print("Enter string:");
+            n=sc.nextLine();
+            String ch[]=n.split(" ");
+            int i,j;
+            String str="";
+            for(i=ch.length-1;i>=0;i--)
+            {
+                c=ch[i];
+                String revw="";
+                for(j=0;j<c.length();j++)
+                {
+                revw=revw+c.charAt(j);
+                }
+                if(i>0)
+                revw=revw+".";
+               
+                str=str+revw;
+            }
+            System.out.print(str);
+           
+        }
+    }
+
