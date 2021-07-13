@@ -1,0 +1,23 @@
+import java.util.*;
+import java.io.*;
+public class Main
+{
+public static void main(String[] args)
+{
+    Scanner sc=new Scanner(System.in);
+    System.out.print("Enter String:");
+    String s=sc.nextLine();
+    int c=0;
+    int r=s.length()-1;
+    while(c<r && s.charAt(c)==s.charAt(r))
+    {
+       int a=s.charAt(c);
+       while(c<r && s.charAt(c)==a)
+       c++;
+       while(c<r && s.charAt(r)==a)
+       r--;
+    }
+    System.out.print((r-c)+1);
+}
+}
+
