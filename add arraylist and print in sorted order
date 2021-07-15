@@ -1,0 +1,22 @@
+import java.util.*;
+class Main
+{
+    public static void main(String args[])
+    {
+        ArrayList<Integer>m=new ArrayList<Integer>();
+        ArrayList<Integer>j=new ArrayList<Integer>();
+        m.add(10);
+        m.add(20);
+        m.add(30);
+        m.add(40);
+        j.add(100);
+        j.add(200);
+        j.add(300);
+        j.add(400);
+        System.out.println("Enter First Array:"+m);
+        System.out.println("Enter Second Array:"+j);
+        j.addAll(m);
+        Collections.sort(j);
+        System.out.println("Final List:"+j);
+    }
+}
