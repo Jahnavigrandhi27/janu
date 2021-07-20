@@ -1,0 +1,28 @@
+import java.util.*;
+class Main
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter n value:");
+        int n=sc.nextInt();
+        String[] s=new String[n];
+        System.out.println("Enter names:");
+        for(int i=0;i<n;i++)
+        s[i]=sc.next();
+        HashMap<String,Integer>x=new HashMap<String,Integer>();
+        for(int i=0;i<n;i++)
+        {
+            if(x.containsKey(s[i]))
+            x.put(s[i],x.get(s[i])+1);
+            else
+            x.put(s[i],1);
+        }
+        System.out.println("output:");
+        for(Map.Entry<String,Integer>i:x.entrySet())
+        {
+            if(i.getValue()>2)
+            System.out.println(i.getKey()+"="+i.getValue());
+        }
+    }
+}
