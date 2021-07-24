@@ -1,0 +1,29 @@
+class Solution {
+    public int searchInsert(int[] nums, int target)
+    {
+       int n=nums.length;
+        int c=0;
+        if(n<1)
+            return -1;
+        if(target>nums[n-1])
+        {
+            return n;
+        }
+        else if(target<nums[c])
+            return c;
+        int m=n/2;
+        if(nums[m]<=target)
+            c=m;
+        else
+            n=m;
+        while(c<n)
+            if(nums[c]==target)
+                return c;
+        else if(target>nums[c] && target<nums[c+1])
+            return c+1;
+        c++;
+         return -1;
+    }
+ 
+}
+
